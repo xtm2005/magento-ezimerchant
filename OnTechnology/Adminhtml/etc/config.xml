@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<OnTechnology_Adminhtml>
+			<version>0.1.0</version>
+		</OnTechnology_Adminhtml>
+	</modules>
+	<stores>
+			<admin>
+				<!-- override default admin design package and theme -->
+				<design>
+					<package>
+						<name>default</name>
+					</package>
+					<theme>
+						<default>ontechnology</default>
+					</theme>
+				</design>
+			</admin>
+	</stores>
+<global>
+	<blocks>
+		<adminhtml>
+			<rewrite>
+				<catalog_product_edit>OnTechnology_Adminhtml_Block_Catalog_Product_Edit</catalog_product_edit>
+			</rewrite>
+		</adminhtml>
+	</blocks>
+</global>
+<admin>
+<routers>
+<adminhtml>
+<args>
+<modules>
+<OnTechnology_Adminhtml before="Mage_Adminhtml">OnTechnology_Adminhtml</OnTechnology_Adminhtml>
+</modules>
+</args>
+</adminhtml>
+</routers>
+</admin>
+</config>
